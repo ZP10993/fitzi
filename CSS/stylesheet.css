@@ -1,0 +1,771 @@
+h1, h2, h3, p, a {
+    font-family: outfit; 
+    color: #000; 
+}
+
+
+
+h1 {
+    font-size: 65px;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 35px;
+    line-height: 1.3;
+}
+
+h3 {
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+p {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+a {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+@media (max-width: 576px) {
+    html, body {
+        overflow: hidden;
+    }
+}
+
+html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+     .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 5px;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 5px;
+        background-color: #fff;
+        color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw; 
+        box-sizing: border-box;
+        z-index: 1000; 
+    }
+
+    body {
+        padding-top: 70px; 
+    }
+
+
+    .head::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100vw; 
+        height: 2px; 
+        background: rgba(0, 0, 0, 1);
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+    }
+
+    .logo {
+        flex: 1;
+        display: flex;
+        justify-content: flex-start;
+        padding: 0px; 
+    }
+
+    .logo img {
+        max-width: 50%;
+    }
+
+  
+    .navigation {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .navigation ul {
+        list-style: none;
+        display: flex;
+        gap: 15px; 
+        padding: 0;
+        margin: 0;
+    }
+
+    .navigation a {
+        text-decoration: none;
+        color: #000;
+        font-size: 15px; 
+        font-weight: bold;
+        padding: 5px 20px;
+        border-radius: 12px;
+    }
+
+    .navigation a:hover {
+        background: #000;
+        color: #fff;
+    }
+
+
+
+
+    .start {
+        position: relative;
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        height: 100vh; 
+        overflow: hidden;
+        padding-left: 25px; 
+        padding-right: 25px;
+    }
+
+
+    .start img {
+        width: 100%;
+        height: 100%; 
+        object-fit: cover;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1; 
+    }
+
+
+    .start .planetarium-fritzlar {
+        font-size: 24px; 
+        font-weight: normal;
+        color: white;
+        z-index: 1;
+        text-align: left;
+        margin-bottom: -px; 
+    }
+
+
+    .start .subline {
+        font-size: 65px; 
+        font-weight: bold;
+        color: white;
+        z-index: 1;
+        text-align: left;
+        margin-top: 0px; 
+    }
+
+
+
+
+    .benefits-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        padding-left: 25px;
+        padding-right: 25px;
+        flex-wrap: nowrap;
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+
+    .benefit-kuppel, .benefit-fulldome, .benefit-location {
+        flex: 1;
+        min-width: 45%; 
+        max-width: 60%; 
+        height: 50px;
+        background-color: #f4f4f4;
+        padding: 10px;
+        text-align: center;
+        border-radius: 12px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        border: 2px solid black;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+    }
+
+
+    .benefit-kuppel img, 
+    .benefit-fulldome img, 
+    .benefit-location img {
+        width: 70px;
+        height: 70px;
+        object-fit: contain;
+    }
+
+
+    .benefit-kuppel h3, 
+    .benefit-fulldome h3, 
+    .benefit-location h3 {
+        margin: 0;
+        font-size: 18px;
+        text-align: left;
+    }
+
+
+    @media (max-width: 600px) {
+        .benefits-container {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            justify-content: flex-start;
+        }
+
+        .benefit-kuppel, .benefit-fulldome, .benefit-location {
+            min-width: 50%; 
+            max-width: 75%; 
+            height: 80px;
+            flex-direction: row;
+        }
+    }
+
+    .intro {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        text-align: left;
+        border-radius: 12px;
+    }
+
+
+    .intro header h1 {
+        font-size: 28px;
+        font-weight: bold;
+        color: #222;
+        margin-bottom: 10px;
+    }
+
+    .intro header p {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+
+    .intro-container p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #000;
+        text-align: justify;
+    }
+
+
+    .intro-container_slider {
+        position: relative;
+        max-width: 100%;
+        overflow: hidden;
+        margin-top: 30px;
+        border-radius: 12px;
+    }
+
+    .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        border-radius: 12px;
+    }
+
+    .slides img {
+        width: 100%;
+        height:fit-content; 
+        object-fit: contain; 
+        border-radius: 12px; 
+
+    }
+    
+
+
+    .prev, .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 50%;
+        transition: 0.3s;
+    }
+
+    .prev:hover, .next:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+
+
+    .dots {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .dot {
+        width: 12px;
+        height: 12px;
+        margin: 5px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.3s;
+    }
+
+    .dot.active {
+        background-color: #333;
+    }
+
+
+
+
+    .technic {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100vw; 
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 25px;
+        padding-right: 25px;
+        box-sizing: border-box;
+    }
+
+
+    .image-container {
+        flex: 1;
+        width: 100vw; 
+    }
+
+    .image-container img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+
+    .text-container {
+        flex: 1;
+        max-width: 50%;
+        text-align: left;
+    }
+
+    .text-container h2 {
+        font-size: 28px;
+        color: #222;
+        margin-bottom: 15px;
+    }
+
+    .text-container p {
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: justify;
+    }
+
+
+    @media (max-width: 1000px) {
+        .technic {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .image-container, .text-container {
+            max-width: 100%;
+        }
+    }
+
+
+
+    .programm {
+        background-color: #111111; 
+        color: #fff; 
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-bottom: 40px;
+        padding-top: 10px;
+        text-align: left;
+    }
+
+    .programm-container {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        max-width: 1200px;
+
+    }
+
+    .card {
+        background-color: #222; 
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+        text-align: left;
+        flex: 1;
+        min-width: 320px;
+        max-width: 380px;
+        border: 1px solid #444;
+    }
+
+    .programm h1 {
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .card h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #fff;
+    }
+
+    .card p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #ddd;
+    }
+
+
+
+    .termin {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: bold;
+        margin-top: 15px;
+        color: #fff;
+    }
+    
+    .termin-icon {
+        width: 40px; 
+        height: 40px;
+    }
+    
+
+    @media (max-width: 900px) {
+        .programm-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .card {
+            max-width: 90%;
+        }
+    }
+
+
+.besuch h2 {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+  
+    .map {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        text-align: left;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    
+    .map h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: #000
+    }
+    
+    .map iframe {
+        width: 100%;
+        max-width: 600px;
+        height: 300px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .phone {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .mail {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .oeffnungszeiten {
+        text-align: left;
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+   .oeffnungszeiten h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        color: #000;
+    }
+
+    .oeffnungszeiten p {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #000;
+        margin: 5px 0;
+    }
+
+
+
+    .eintrittspreise {
+        padding-top: 20px;
+    }
+
+    
+    .eintrittspreise h2 {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .eintrittspreise-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        padding-top: 0px;
+        padding-bottom: 50px;
+        padding-left: 25px;
+        padding-right: 25px;
+        flex-wrap: nowrap;
+        max-width: 100%;
+        overflow-x: auto;
+    }
+
+ 
+    .eintritt-erwachsene, .eintritt-ermaessigt, .eintritt-kinder {
+        flex: 1;
+        min-width: 45%; 
+        max-width: 60%; 
+        background-color: #f4f4f4;
+        padding: 15px;
+        text-align: center;
+        border-radius: 12px;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        border: 2px solid black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+
+    .eintritt-erwachsene img, 
+    .eintritt-ermaessigt img, 
+    .eintritt-kinder img {
+        width: 70px;
+        height: 70px;
+        object-fit: contain;
+    }
+
+
+    .eintritt-erwachsene h3, 
+    .eintritt-ermaessigt h3, 
+    .eintritt-kinder h3 {
+        margin: 0;
+        font-size: 18px;
+        text-align: center;
+    }
+
+
+    @media (max-width: 600px) {
+        .eintrittspreise-container {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            justify-content: flex-start;
+        }
+
+        .eintritt-erwachsene, .eintritt-ermaessigt, .eintritt-kinder {
+            min-width: 50%; 
+            max-width: 75%; 
+            flex-direction: column;
+        }
+    }
+
+
+
+
+
+
+
+
+    .footer {
+        background-color: #111111; 
+        color: #fff;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        padding: 25px;
+        gap: 10px;
+    }
+
+    .footer-logo {
+        width: auto; 
+        height: auto; 
+        max-width: 40%; 
+        max-height: 40%; 
+    }
+
+    .footer nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer nav ul li {
+        display: inline;
+    }
+
+    .footer nav ul li a {
+        color: #4da6ff; 
+        text-decoration: none;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        font-size: 18px;
+        transition: 0.3s;
+    }
+
+    .footer nav ul li a:hover {
+        color: #fff;
+    }
+
+    .kontakt, .oeffnungszeiten-footer {
+        text-align: left;
+        width: 100%;
+        max-width: 400px;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .kontakt h3, .oeffnungszeiten-footer h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+        color: #fff;
+    }
+
+    .kontakt p, .oeffnungszeiten-footer p {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #ddd;
+        margin: 5px 0;
+    }
+
+    .kontakt a {
+        color: #4da6ff;
+        text-decoration: none;
+    }
+
+    .kontakt a:hover {
+        text-decoration: underline;
+        color: #fff;
+    }
+
+    .footer-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 30px;
+        width: 100%;
+        max-width: 1200px;
+    }
+
+    @media (min-width: 768px) {
+        .footer {
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+    }
+
+    .icon {
+        width: 20px; 
+        height: 20px;
+        margin-right: 10px; 
+        vertical-align: middle;
+    }
+    
+    .icon {
+        width: 20px; 
+        height: 20px;
+        margin-right: 10px; 
+        vertical-align: middle;
+    }
+    
+
+    .footer-bottom {
+        background-color: #fff; 
+        padding: 15px 0;
+        text-align: center;
+        box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .footer-bottom ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-bottom ul li {
+        display: inline;
+    }
+
+    .footer-bottom ul li a {
+        color: #000;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 16px;
+        transition: color 0.3s;
+    }
+
+    .footer-bottom ul li a:hover {
+        color: #007BFF; 
+    }
+    
